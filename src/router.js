@@ -2,9 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Routing from './views/Routing.vue'
-//
-// 他のコンポーネントは省略
-//
 
 Vue.use(Router)
 
@@ -19,9 +16,6 @@ export default new Router({
             name: 'home',
             component: Home
         },
-        //
-        // 省略
-        //
         {
             path: '/routing',
             name: 'routing',
