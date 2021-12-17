@@ -2,6 +2,10 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <p>{{ cnt }}</p>
+    <button v-on:click="say('hi')">Say hi</button>
+    <button v-on:click="say('what')">Say what</button>
+    <button v-on:click="cnt++">Increment</button>
     <div 
       id="nav" 
       class="tab-area-base">
@@ -25,6 +29,16 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  methods: {
+    say: function (message) {
+      alert(message)
+    }
+  },
+  data() {
+    return {
+      cnt:0
+    }
   }
 }
 </script>
