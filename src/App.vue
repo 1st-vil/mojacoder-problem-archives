@@ -43,7 +43,7 @@
       <v-btn to="/routing">Routing</v-btn>
       <router-view />
       <h1 v-text="message"></h1>
-      <h1 v-text="sql_res"></h1>
+      <h1 v-for="val in sql_res" :key=val.id>{{ val.id }} - {{ val.name }} (sql_res)</h1>
     </v-main>
   </v-app>
 </template>
@@ -67,11 +67,17 @@ export default {
   mounted () {
     axios
       .get('https://mojacoder-problem-archives-api.herokuapp.com/')
-      .then(response => (this.sql_res = response))
+      .then(response => (
+        this.sql_res = response.data,
+        console.log(response.data)
+        ))
   },
 
   methods: {
-    get_message: function() {
+    set_info(info) {
+      this.message = info
+    },
+    get_message() {
       return 'abc'
     },
   },
