@@ -38,40 +38,25 @@
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
       <v-btn to="/">Home</v-btn>
       <v-btn to="/routing">Routing</v-btn>
       <router-view />
       <h1 v-text="message"></h1>
-      <h1 v-for="val in sql_res" :key=val.id>{{ val.id }} - {{ val.name }} (sql_res)</h1>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-const axios = require('axios')
-
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    
   },
 
   data: () => ({
     message: "aaa",
-    sql_res: null
   }),
-
-  mounted () {
-    axios
-      .get('https://mojacoder-problem-archives-api.herokuapp.com/')
-      .then(response => (
-        this.sql_res = response.data,
-        console.log(response.data)
-        ))
-  },
 
   methods: {
     set_info(info) {
