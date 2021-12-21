@@ -3,6 +3,9 @@
       <v-data-table
       :headers="headers"
       :items="sql_res">
+      <template v-slot:item.submit_time="{ item }">
+        <span>{{ item.submit_time|moment }}</span>
+      </template>
       <template v-slot:item.url="{ item }">
         <a target="_blank" :href="item.url">
           {{ item.url }} 
@@ -14,6 +17,7 @@
 
 <script>
 const axios = require('axios')
+import moment from 'moment'
 export default {
   name: 'Problems',
 
@@ -39,6 +43,12 @@ export default {
       }
     ]
   }),
+  
+  filters: {
+    moment(date) {
+      return moment(date).format('YYYY-MM-DD HH:mm:ss');
+    }
+  },
 
   mounted () {
     axios
