@@ -36,10 +36,9 @@
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
-
     <v-main>
-      <v-btn to="/">Home</v-btn>
-      <v-btn to="/routing">Routing</v-btn>
+      <v-btn to="/">問題</v-btn>
+      <v-btn to="/Contests">コンテスト</v-btn>
       <router-view />
       <h1 v-text="message"></h1>
     </v-main>
@@ -55,7 +54,7 @@ export default {
   },
 
   data: () => ({
-    message: "aaa",
+    message: "テストメッセージ",
   }),
 
   methods: {
