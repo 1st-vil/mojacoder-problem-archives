@@ -8,8 +8,6 @@ import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false
 
-console.log(process.env)
-
 new Vue({
   router,
   vuetify,
