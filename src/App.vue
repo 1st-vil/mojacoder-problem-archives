@@ -2,45 +2,28 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
+      color="secondary"
       dark
     >
       <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        <h3 class="font-weight-bold">MojaCoder Problem Archives</h3>
       </div>
 
       <v-spacer></v-spacer>
-
+      
+      <v-btn to="/" outlined plain class="mx-2">問題一覧</v-btn>
+      <v-btn to="/contests" outlined plain class="mx-2">コンテスト一覧</v-btn>
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        href="https://github.com/1st-vil/mojacoder-problem-archives"
         target="_blank"
         text
       >
-        <span class="mr-2">Latest Release</span>
+        <span class="mr-2 font-weight-light" style="text-transform: none">GitHub</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
     <v-main>
-      <v-btn to="/">問題</v-btn>
-      <v-btn to="/Contests">コンテスト</v-btn>
       <router-view />
-      <h1 v-text="message"></h1>
     </v-main>
   </v-app>
 </template>

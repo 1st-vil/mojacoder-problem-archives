@@ -1,20 +1,20 @@
 <template>
 <v-container>
-      <v-data-table
-      :headers="headers"
-      :items="sql_res"
-      :sort-by="['submit_time']"
-      :sort-desc="[true]"
-      :footer-props="{'items-per-page-options':[-1]}">
-      <template v-slot:item.submit_time="{ item }">
-        <span>{{ item.submit_time|moment }}</span>
-      </template>
-      <template v-slot:item.url="{ item }">
-        <a target="_blank" :href="item.url">
-          {{ item.url }} 
-        </a>
-      </template>
-      </v-data-table>
+  <v-data-table
+  :headers="headers"
+  :items="sql_res"
+  :sort-by="['submit_time']"
+  :sort-desc="[true]"
+  :footer-props="{'items-per-page-options':[-1]}">
+  <template v-slot:item.submit_time="{ item }">
+    <span>{{ item.submit_time|moment }}</span>
+  </template>
+  <template v-slot:item.url="{ item }">
+    <a target="_blank" :href="item.url">
+      {{ item.url }} 
+    </a>
+  </template>
+  </v-data-table>
 </v-container>
 </template> 
 
