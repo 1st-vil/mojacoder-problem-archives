@@ -1,42 +1,45 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="secondary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <h3 class="font-weight-bold">MojaCoder Problem Archives</h3>
-      </div>
-
-      <v-spacer></v-spacer>
-      
-      <v-btn to="/" outlined plain class="mx-2">問題一覧</v-btn>
-      <v-btn to="/contests" outlined plain class="mx-2">コンテスト一覧</v-btn>
-      <v-btn
-        href="https://github.com/1st-vil/mojacoder-problem-archives"
-        target="_blank"
-        text
-      >
-        <span class="mr-2 font-weight-light" style="text-transform: none">GitHub</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
     <v-main>
-      <router-view />
+      <Header/>
+      <router-view/>
     </v-main>
   </v-app>
 </template>
 
+ <style lang="scss" scoped>
+.v-toolbar__title {
+  overflow: visible !important;
+  margin-right: 50px !important;
+}
+ 
+.v-app-bar__nav-icon {
+  @include display_pc {
+    display: none !important;
+  }
+}
+
+.v-tabs {
+  display: none;
+ 
+  @include display_pc {
+    display: block !important;
+  }
+}
+</style>
+
 <script>
+import Header from "./components/Header.vue"
+
 export default {
   name: 'App',
 
   components: {
-    
+    Header
   },
 
   data: () => ({
+    drawer: false,
     message: "テストメッセージ",
   }),
 
