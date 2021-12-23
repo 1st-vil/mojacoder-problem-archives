@@ -9,9 +9,14 @@
   <template v-slot:item.submit_time="{ item }">
     <span>{{ item.submit_time|moment }}</span>
   </template>
-  <template v-slot:item.url="{ item }">
+  <template v-slot:item.writer="{ item }">
+    <a target="_blank" :href="'https://mojacoder.app/users/'+item.writer">
+      {{ item.writer }} 
+    </a>
+  </template>
+  <template v-slot:item.title="{ item }">
     <a target="_blank" :href="item.url">
-      {{ item.url }} 
+      {{ item.title }} 
     </a>
   </template>
   </v-data-table>
@@ -39,10 +44,6 @@ export default {
       {
         text: '問題名',
         value: 'title'
-      },
-      {
-        text: '問題url',
-        value: 'url'
       }
     ]
   }),
