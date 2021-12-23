@@ -1,24 +1,7 @@
-# mojacoder-problem-archives
+# MojaCoder-Problem-Archives
 
-## Project setup
-```
-yarn install
-```
+## これは何？
+現在 (2021/12/22) のMojaCoderは、一定数以上の問題が投稿されると [新規問題一覧](https://mojacoder.app/problems) から昔の問題への導線が消失してしまう仕様になっています。これはその一時的な対策として問題リンクなどを保存しておくサイトです。
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## アイコン
+このサイトのアイコンは [The best Favicon Generator \(completely free\) \| Favicon\.io](https://favicon.io/favicon-generator/) を用いて作成されました。

@@ -1,11 +1,11 @@
 <template>
 <v-container>
-      <h1>Routing Test Page [ Home ]</h1>
+  <p>未実装ですm(__)m</p>
 </v-container>
 </template>
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Contests'
 }
 </script>
