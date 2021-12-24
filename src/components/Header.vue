@@ -1,9 +1,11 @@
 <template>
   <header>
     <v-app-bar
+      flat
       app
-      color="secondary"
+      color="#343a40"
       dark
+      height="56"
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <v-toolbar-title>MojaCoder Problem Archives</v-toolbar-title>
