@@ -52,11 +52,9 @@
 <script>
 export default {
   name: 'Header',
-  data () {
-    return {
-      drawer: false,
-    }
-  }
+  data: () => ({
+    drawer: false,
+  })
 }
 </script>
  

@@ -10,12 +10,12 @@
     <span>{{ item.submit_time|moment }}</span>
   </template>
   <template v-slot:item.writer="{ item }">
-    <a target="_blank" :href="'https://mojacoder.app/users/'+item.writer">
+    <a :href="'https://mojacoder.app/users/'+item.writer" target="_blank">
       {{ item.writer }} 
     </a>
   </template>
   <template v-slot:item.title="{ item }">
-    <a target="_blank" :href="item.url">
+    <a :href="item.url" target="_blank">
       {{ item.title }} 
     </a>
   </template>
@@ -58,8 +58,7 @@ export default {
     axios
       .get(process.env.VUE_APP_API_URL)
       .then(response => (
-        this.sql_res = response.data,
-        console.log(response.data)
+        this.sql_res = response.data
         ))
   },
 }
