@@ -40,7 +40,7 @@
             <v-list-item to="/contests">
               <v-list-item-title>コンテスト一覧</v-list-item-title>
             </v-list-item>
-            <v-list-item href="https://github.com/1st-vil/mojacoder-problem-archives">
+            <v-list-item href="https://github.com/1st-vil/mojacoder-problem-archives" target="_blank">
               <v-list-item-title>GitHub</v-list-item-title>
             </v-list-item>
           </v-list-item-group>

@@ -5,7 +5,7 @@
 
       <v-card class="px-3 py-3">
         <v-card-title class="grey lighten-3 py-1 heading-6">
-          <template>問題情報収集へのご協力のお願い</template>
+          <template>情報収集へのご協力のお願い</template>
         </v-card-title>
         <v-card-text class="post-card-text mt-2">
           <p>
