@@ -56,7 +56,7 @@ export default {
 
   mounted () {
     axios
-      .get(process.env.VUE_APP_API_URL)
+      .get(process.env.VUE_APP_API_URL + '/problems')
       .then(response => (
         this.sql_res = response.data
         ))
