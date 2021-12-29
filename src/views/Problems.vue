@@ -14,9 +14,14 @@
       {{ item.writer }} 
     </a>
   </template>
-  <template v-slot:item.title="{ item }">
-    <a :href="item.url" target="_blank">
-      {{ item.title }} 
+  <template v-slot:item.problem_title="{ item }">
+    <a :href="item.problem_url" target="_blank">
+      {{ item.problem_title }} 
+    </a>
+  </template>
+  <template v-slot:item.contest_title="{ item }">
+    <a :href="item.contest_url" target="_blank">
+      {{ item.contest_title }} 
     </a>
   </template>
   </v-data-table>
@@ -43,7 +48,11 @@ export default {
       },
       {
         text: '問題名',
-        value: 'title'
+        value: 'problem_title'
+      },
+      {
+        text: 'コンテスト名',
+        value: 'contest_title'
       }
     ]
   }),
